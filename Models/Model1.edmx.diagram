@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="05089f3ece2f4955af9e630e9c8d392b" Name="Diagram1" ZoomLevel="95">
+        <EntityTypeShape EntityType="Model.Category" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Product" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK__Products__Produc__1273C1CD" />
+        <EntityTypeShape EntityType="Model.Contact" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Model.Invoice" Width="1.5" PointX="3" PointY="8" />
+        <EntityTypeShape EntityType="Model.Order" Width="1.5" PointX="5.25" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.User" Width="1.5" PointX="0.75" PointY="8" />
+        <AssociationConnector Association="Model.FK__Invoice__UserFK__29572725" />
+        <AssociationConnector Association="Model.FK__Order__invoiceFK__286302EC" />
+        <AssociationConnector Association="Model.FK__Order__ProductFK__276EDEB3" />
+        <AssociationConnector Association="Model.FK__Order__user_id_F__34C8D9D1" />
+        <AssociationConnector Association="Model.FK__Order__user_id_F__35BCFE0A" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

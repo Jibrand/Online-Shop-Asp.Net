@@ -1,0 +1,91 @@
+﻿@model IEnumerable<Final_Project.Models.AdminOrderList_Result>
+
+@{
+    ViewBag.Title = "order";
+    Layout = "~/Views/Shared/Adminlayoutt.cshtml";
+}
+
+<h2>order</h2>
+
+
+
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table" id="b">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.contact)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.qty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bill)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.totalbill)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.datetime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.contact)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.qty)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.bill)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.totalbill)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.datetime)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.invoiceFK }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.invoiceFK }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.invoiceFK })
+                </td>
+            </tr>
+        }
+        </thead>
+</table>
